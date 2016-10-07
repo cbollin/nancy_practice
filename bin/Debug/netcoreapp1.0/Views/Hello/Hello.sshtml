@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="Content/style.css"/>
+         <title>Hello</title>
+    </head>
+    <body>
+        <h1>Hello from the HTML file!</h1>
+        <p>hope this text is green!</p>
+        <p>@ViewBag.MyMessageToUsers</p>
+        <p>@ViewBag.AnswerText</p>
+
+        @Each
+        @Current
+        @EndEach
+
+
+        <form action="/formsubmitted" method="post">
+        <input type="text" name="first_name"/>
+        </form>
+
+        @If.Context.ViewBag.show
+        <p>I only appear if ViewBag.show is true!</p>
+        @EndIf
+    </body>
+</html>
